@@ -18,6 +18,7 @@ def set_dict():
 
 set_dict()    
 
+# == Main Chinese segmenter function ==
 def segmenter(text):
     seg_text = jieba.lcut(text)
     # Simply remove all non-Chinese letters
@@ -25,3 +26,12 @@ def segmenter(text):
         seg_text[i] = ZH.sub(r'', t)
     # Remove none value and return    
     return list(filter(None, seg_text))
+
+def del_stops(segs):
+    # Delete stopwords
+    with open('stopwords.txt', 'r', encoding='utf8') as f:
+        stopwords = f.readlines()
+    stopwords = [w.rstrip('\n') for w in stopwords]
+    
+    return [w for w in segs if w not in stopwords]
+    
