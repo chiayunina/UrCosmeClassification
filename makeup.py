@@ -1,9 +1,10 @@
+import os
 import numpy as np
-import jieba
-from seg_zhtw import seg
+
 from tqdm import tqdm
 
 from sklearn.feature_extraction.text import HashingVectorizer, TfidfTransformer
+from sklearn.pipeline import Pipeline
 
 # Load data
 print("Loading dataset...")
