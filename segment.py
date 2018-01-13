@@ -29,6 +29,9 @@ def segmenter(text):
 
 def del_stops(segs):
     # Delete stopwords
+    #
+    # Parameters:
+    # - segs: a list of tokens
     with open('stopwords.txt', 'r', encoding='utf8') as f:
         stopwords = f.readlines()
     stopwords = [w.rstrip('\n') for w in stopwords]
