@@ -190,7 +190,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', '--srcpath',
-                        help='souurce directory path', type=str)
+                        help='source directory path', type=str)
     parser.add_argument(
         '-m', '--mode', help='1:bow\n2:cnn\n3:rnn', type=int, default=1)
     parser.add_argument(
