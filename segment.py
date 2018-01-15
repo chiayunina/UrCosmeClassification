@@ -1,7 +1,7 @@
 # Chinese Segmenter
 import re
 import jieba
-
+from IPython import embed
 ZH = re.compile(u'[^\u4E00-\u9FA5]')
 
 def run_once(f):
@@ -34,4 +34,9 @@ def del_stops(segs):
     stopwords = [w.rstrip('\n') for w in stopwords]
     
     return [w for w in segs if w not in stopwords]
-    
+
+# if __name__ == '__main__':
+    # with open("txt") as f:
+    #     text = f.read()
+    # segs = segmenter(text)
+    # stopped_segs = del_stops(segs)
